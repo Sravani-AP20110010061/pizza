@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        section {
+            margin: 20px 0;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .menu-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Pizza Shop</h1>
+        <p>Delicious Pizza Right to Your Doorstep!</p>
+    </header>
+
+    <section>
+        <h2>Menu</h2>
+
+        <div class="menu-item">
+            <h3>Margherita Pizza</h3>
+            <p>Fresh tomatoes, mozzarella, basil, and olive oil.</p>
+            <p>Price: $10.99</p>
+        </div>
+
+        <div class="menu-item">
+            <h3>Pepperoni Pizza</h3>
+            <p>Classic pepperoni, mozzarella, and tomato sauce.</p>
+            <p>Price: $12.99</p>
+        </div>
+
+        <div class="menu-item">
+            <h3>Veggie Supreme</h3>
+            <p>Mushrooms, bell peppers, onions, black olives, and cheese.</p>
+            <p>Price: $11.99</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Order Online</h2>
+        <p>Place your order online and have it delivered to your doorstep!</p>
+        <p><a href="#your-order-form">Order Now</a></p>
+    </section>
+
+    <section id="your-order-form">
+        <h2>Order Form</h2>
+        <form action="/submit-order" method="post">
+            <label for="pizza-type">Select Pizza:</label>
+            <select id="pizza-type" name="pizza-type">
+                <option value="margherita">Margherita Pizza</option>
+                <option value="pepperoni">Pepperoni Pizza</option>
+                <option value="veggie">Veggie Supreme</option>
+            </select>
+
+            <br>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" value="1">
+
+            <br>
+
+            <label for="delivery-address">Delivery Address:</label>
+            <textarea id="delivery-address" name="delivery-address" rows="4" cols="50" placeholder="Enter your delivery address"></textarea>
+
+            <br>
+
+            <input type="submit" value="Place Order">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Pizza Shop. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
